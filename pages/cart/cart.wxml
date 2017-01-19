@@ -1,14 +1,34 @@
 <view class="container">
 	<view class="cart-list" wx:for="{{cartList}}" wx:for-item="items">
+	    <view class="shopping-name">
+            <view class="cart-item-checkbox-box">
+                <checkbox-group bindchange="checkboxChange">
+                   <checkbox class="cart-list-item-checkbox" value="{{items.shop.name}}" checked="{{items.shop.checked}}"/>
+                </checkbox-group>
+            </view>
+            <view class="cart-item-icon-box">
+                <image class="list-image" src="{{items.shop.shopIcon}}" mode="widthFix"></image>
+            </view>
+            <view>
+                {{items.shop.name}}
+            </view>
+	    </view>
 		<view class="cart-list-item" wx:for="{{items.list}}" wx:for-item="item">
+		    <view class="cart-item-checkbox-box">
+		        <checkbox-group bindchange="checkboxChange">
+                   <checkbox class="cart-list-item-checkbox" value="{{item.name}}" checked="{{item.checked}}"/>
+                </checkbox-group>
+		    </view>
 			<view class="image-box">
 				<image class="list-image" src="{{item.imgUrl}}" mode="widthFix"></image>
 			</view>
 			<view class="cart-list-item-content">
 				<text class="cart-list-item-title">{{item.title}}</text>
 				<text class="cart-list-item-desc">{{item.desc}}</text>
-				<text class="cart-list-item-num">数量{{item.num}}</text>
-				<text class="cart-list-item-price">¥{{item.price}}</text>
+				<view class="car-item-price-box">
+                    <text class="cart-list-item-price">¥{{item.price}}</text>
+                    <text class="cart-list-item-num">x{{item.num}}</text>
+				</view>
 			</view>
 		</view>
 	</view>

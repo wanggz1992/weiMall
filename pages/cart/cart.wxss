@@ -1,16 +1,19 @@
 .cart-list-item {
 	display: flex;
-	margin-left: 100rpx;
 	margin-top: 10rpx;
 }
 
+.checkbox-box{
+    flex:1
+}
+
 .image-box {
-	flex: 1;
+	flex: 2;
 }
 
 .cart-list-item-content {
-	flex: 3;
-	margin-left: 10rpx;
+	flex: 6;
+	margin-left: 25rpx;
 }
 
 .list-image {
@@ -22,10 +25,15 @@
 	display: block;
 }
 
+.cart-list-item-title{
+	font-size: 24rpx;
+	line-height:40rpx
+}
 .cart-list-item-desc {
-	font-size: 30rpx;
+	font-size: 24rpx;
 	color: #a9a9a9;
 	display: block;
+	line-height:30rpx
 }
 
 .cart-list-item-num {
@@ -33,7 +41,32 @@
 	color: #a9a9a9;
 }
 
+.cart-item-checkbox-box{
+    align-items:center;
+    display:flex;
+    padding: 0 15rpx 0 25rpx
+
+}
+
 .cart-list-item-price {
 	color: #f00;
-	margin-left: 100rpx;
+}
+
+.cart-list-item-checkbox{
+    border-radius: 100rpx;
+}
+.car-item-price-box{
+	display: flex;
+	justify-content:space-between;
+	padding:10rpx 15rpx 0 0;
+}
+
+.shopping-name{
+    display: flex;
+    padding: 20rpx 0 0 0;
+}
+
+.cart-item-icon-box{
+    width: 40rpx;
+    height:40rpx;
 }
