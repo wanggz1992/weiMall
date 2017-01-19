@@ -1,0 +1,39 @@
+.cart-list-item {
+	display: flex;
+	margin-left: 100rpx;
+	margin-top: 10rpx;
+}
+
+.image-box {
+	flex: 1;
+}
+
+.cart-list-item-content {
+	flex: 3;
+	margin-left: 10rpx;
+}
+
+.list-image {
+	width: 100%;
+}
+
+.cart-list-title  {
+	font-weight: bold;
+	display: block;
+}
+
+.cart-list-item-desc {
+	font-size: 30rpx;
+	color: #a9a9a9;
+	display: block;
+}
+
+.cart-list-item-num {
+	font-size: 30rpx;
+	color: #a9a9a9;
+}
+
+.cart-list-item-price {
+	color: #f00;
+	margin-left: 100rpx;
+}

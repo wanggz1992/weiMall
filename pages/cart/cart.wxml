@@ -1,0 +1,15 @@
+<view class="container">
+	<view class="cart-list" wx:for="{{cartList}}" wx:for-item="items">
+		<view class="cart-list-item" wx:for="{{items.list}}" wx:for-item="item">
+			<view class="image-box">
+				<image class="list-image" src="{{item.imgUrl}}" mode="widthFix"></image>
+			</view>
+			<view class="cart-list-item-content">
+				<text class="cart-list-item-title">{{item.title}}</text>
+				<text class="cart-list-item-desc">{{item.desc}}</text>
+				<text class="cart-list-item-num">数量{{item.num}}</text>
+				<text class="cart-list-item-price">¥{{item.price}}</text>
+			</view>
+		</view>
+	</view>
+</view>

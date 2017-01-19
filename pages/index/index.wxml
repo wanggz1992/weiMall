@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+		<input placeholder="水哥出品 质量保证" />
+  </view>
+	<view class="good-list-container">
+		<view class="good-left-tree" scroll-y="true">
+			<view wx:for="{{menu}}" wx:key="unique" wx:for-index="pindex" class="good-submenu" wx:for-item="menuItem">
+				<text class="good-submenu-text">{{menuItem.name}}</text>
+				<view class="{{pindex == select.sub && cindex == select.child ? 'menu-node-select menu-node' : 'menu-node'}}" wx:key="unique" wx:for="{{menuItem.child}}" wx:for-index="cindex" wx:for-item="item" id="menu-{{pindex}}-{{cindex}}"  bindtap="bindSelectItem">
+					<text class="{{pindex == select.sub && cindex == select.child ? 'menu-node-text menu-node-text-select' : 'menu-node-text'}}">{{item.name}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="good-list-box" scroll-y="true">
+			<view class="goods-container" wx:key="unique" wx:for="{{list}}" wx:for-item="item" wx:for-index='idx'>
+				<view class="image-box">
+					<image class="list-image" src="{{item.imgUrl}}" mode="widthFix"></image>
+				</view>
+				<view class="goods-content">
+					<view class="goods-title">{{item.title}}</view>
+					<view class="goods-desc">{{item.desc}}</view>
+					<view class="goods-num-container">
+						<text class="goods-sale-num">月售{{item.sale}}</text>
+						<text class="goods-praise">赞{{item.praise}}</text>
+					</view>
+					<view class="good-price-container">
+						<text class="goods-price-container">¥{{item.price}}</text>
+					</view>
+					<view class="num-set-box">
+						<view class="down common-num" wx:if="{{item.num > 0}}" id="down-{{idx}}" bindtap="bindDownTap">-</view>
+						<view class="item-num" wx:if="{{item.num > 0}}">{{item.num}}</view>
+						<view class="add common-num" id="add-{{idx}}" bindtap="bindAddTap">+</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="total-num-container">
+		<view class="total-cart-image-box">
+			<image class="total-cart-image" src="/static/image/cart-null.png"></image>
+			<view class="total-num-box" wx:if="{{totalNum > 0 }}">{{totalNum}}</view>
+		</view>
+		<view class="has-order">
+			<text class="total-price" wx:if="{{order.length > 0}}">¥{{totalPrice}}</text>
+			<text class="total-desc">{{order.length > 0 ? '另需配送费¥9' : '购物车空空如也~'}}</text>
+		</view>
+		<view class="{{order.length > 0 ? 'order-submit order-submit-select' : 'order-submit order-submit-no-select'}}">
+			<text class="order-submit-text">{{order.length > 0 ? '加入购物车' : '¥0起送'}}</text>
+		</view>
+	</view>
+</view>

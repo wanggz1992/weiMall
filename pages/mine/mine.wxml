@@ -1,0 +1,15 @@
+<view class="container">
+	<view class="user-info-container">
+		<image class="user-image-b b-user-image" src="{{userInfo.avatarUrl}}"></image>
+		<image class="user-image-b b-common-image" src="/static/image/beijing.png"></image>
+		<view class="user-info-box">
+			<image class="user-info-image" src="{{userInfo.avatarUrl}}"></image>
+			<text class="user-info-name">{{userInfo.nickName}}</text>
+		</view>
+	</view>
+	<view class="user-operation-list">
+		<view class="user-operation-item">
+			<text class="user-operation-desc">我的积分</text>
+		</view>
+	</view>
+</view>

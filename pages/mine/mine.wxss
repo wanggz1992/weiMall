@@ -1,0 +1,40 @@
+.user-info-container {
+	position: relative;
+	height: 400rpx;
+}
+
+.user-image-b {
+	width: 100%;
+	height: 400rpx;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.b-common-image {
+	opacity: 0.5;
+}
+
+.user-info-box {
+	z-index: 2;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 400rpx;
+}
+
+.user-info-image {
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 75rpx;
+	margin-bottom: 30rpx	;
+}
+
+.user-info-name {
+	font-size: 40rpx;
+	color: #fff;
+	font-weight: bold;
+}
